@@ -1,11 +1,11 @@
 Summary:	A microhttpd server plugin for gmpc
 Name:		gmpc-mserver
-Version:	0.15.5.0
-Release:	%mkrel 3
+Version:	0.17.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
 Url:		http://www.sarine.nl/
-Source0:	http://download.sarine.nl/download/gmpc-0.15.5/%{name}-%{version}.tar.bz2
+Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	libmpd-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libglade2.0-devel
