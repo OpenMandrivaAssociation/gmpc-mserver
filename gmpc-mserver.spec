@@ -10,6 +10,8 @@ BuildRequires:	libmpd-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	libglade2.0-devel
 BuildRequires:	gmpc-devel
+BuildRequires:	taglib-devel
+BuildRequires:	libmicrohttpd-devel
 Requires:	gmpc
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -34,5 +36,5 @@ A microhttpd server plugin for gmpc.
 
 %files
 %defattr(-,root,root)
-%{_datadir}/gmpc/plugins/gmpcmserverplugin.la
-%{_datadir}/gmpc/plugins/gmpcmserverplugin.so
+%{_libdir}/gmpc/plugins/gmpcmserverplugin.la
+%{_libdir}/gmpc/plugins/gmpcmserverplugin.so
