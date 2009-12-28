@@ -1,6 +1,6 @@
 Summary:	A microhttpd server plugin for gmpc
 Name:		gmpc-mserver
-Version:	0.18.0
+Version:	0.19.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Sound
@@ -12,6 +12,7 @@ BuildRequires:	gmpc-devel >= 0.15.4.102
 BuildRequires:	taglib-devel
 BuildRequires:	gtk+2-devel >= 2.4
 BuildRequires:	libmicrohttpd-devel
+BuildRequires:	intltool
 Requires:	gmpc
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -38,3 +39,4 @@ A microhttpd server plugin for gmpc.
 %defattr(-,root,root)
 %{_libdir}/gmpc/plugins/gmpcmserverplugin.la
 %{_libdir}/gmpc/plugins/gmpcmserverplugin.so
+%{_datadir}/gmpc/plugins/gmpc-mserver/gmpc-mserver.png
