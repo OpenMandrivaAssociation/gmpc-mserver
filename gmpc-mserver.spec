@@ -7,14 +7,13 @@ Group:		Sound
 Url:		http://www.sarine.nl/
 Source0:	http://download.sarine.nl/Programs/gmpc/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	libmpd-devel >= 0.14.99
-BuildRequires:	libxml2-devel
+BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	gmpc-devel >= 0.15.4.102
-BuildRequires:	taglib-devel
-BuildRequires:	gtk+2-devel >= 2.4
+BuildRequires:	pkgconfig(taglib)
+BuildRequires:	pkgconfig(gtk+-2.0) >= 2.4
 BuildRequires:	libmicrohttpd-devel
 BuildRequires:	intltool
 Requires:	gmpc
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 A microhttpd server plugin for gmpc.
@@ -28,15 +27,8 @@ A microhttpd server plugin for gmpc.
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std
 
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
-%{_libdir}/gmpc/plugins/gmpcmserverplugin.la
 %{_libdir}/gmpc/plugins/gmpcmserverplugin.so
 %{_datadir}/gmpc/plugins/gmpc-mserver/gmpc-mserver.png
