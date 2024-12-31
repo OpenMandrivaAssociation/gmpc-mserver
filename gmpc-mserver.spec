@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 Summary:	A microhttpd server plugin for gmpc
 Name:		gmpc-mserver
 Version:	0.20.0
