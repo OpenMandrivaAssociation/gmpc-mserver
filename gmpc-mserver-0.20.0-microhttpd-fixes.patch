@@ -1,0 +1,21 @@
+diff -up gmpc-mserver-0.20.0/src/plugin.c.omv~ gmpc-mserver-0.20.0/src/plugin.c
+--- gmpc-mserver-0.20.0/src/plugin.c.omv~	2024-12-31 19:01:19.306677898 +0100
++++ gmpc-mserver-0.20.0/src/plugin.c	2024-12-31 19:02:51.393715517 +0100
+@@ -173,7 +173,7 @@ static int file_reader(str_block *file,
+     }
+ 	return retv;
+ }
+-static int apc_all(void * cls,
++static enum MHD_Result apc_all(void * cls,
+ 		const struct sockaddr * addr,
+ 		socklen_t addrlen) {
+ 
+@@ -184,7 +184,7 @@ static void file_close(str_block *str)
+ 	fclose(str->fp);
+ 	g_free(str);
+ }
+-static int ahc_echo(void *nothing,
++static enum MHD_Result ahc_echo(void *nothing,
+ 		struct MHD_Connection * connection,
+ 		const char * url,
+ 		const char * method,
